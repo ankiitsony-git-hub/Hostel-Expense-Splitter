@@ -21,6 +21,7 @@ if(friendName === "")
 
 
 document.getElementById("friendname").value = ""
+// reset input
 
  showFriends()
  showOptions()
@@ -57,6 +58,7 @@ function showOptions(){
 let paidBy = document.getElementById("paidby")
 
 paidBy.innerHTML = `<option value="">Paid By</option>`
+// reset dropdown
 
 friends.forEach(function(friend){
 
@@ -100,11 +102,12 @@ function addExpense(){
 
         document.getElementById("expenseamount").value
     )
+    // string to numbers
 
  let paidBy = document.getElementById("paidby").value
 
 
-
+// gets onlt checked box
  let checks = document.querySelectorAll(
         'input[type="checkbox"]:checked'
     )
@@ -119,7 +122,7 @@ function addExpense(){
     })
 
 
-
+// checks required fields
     if(
     title === "" || amount === 0 || paidBy === "" || people.length === 0){
     
@@ -144,6 +147,7 @@ amount:amount,
 
 
 expenses.push(expense)
+// add expense into expense array
 
 
 
@@ -167,7 +171,7 @@ check.checked = false
 
 })
 
-
+// updates ui by calling functions 
 
 showExpenses()
 
@@ -210,6 +214,7 @@ function showExpenses()
 
     <td>${expense.people.join(", ")}</td>
     </tr>`
+    // converta array into string with comma and space
     })
 }
 
@@ -271,6 +276,7 @@ balance[friend] = 0
     friends.forEach(function(friend){
 
         let money = balance[friend].toFixed(2)
+        // upto 2 decimal points
 
         let color = ""
 
@@ -296,4 +302,8 @@ balance[friend] = 0
         balanceBox.innerHTML += `<div class="balance ${color}"> ${friend} : ₹${money} </div>`
     })
 }
+
+
+
+// next save data locally 
 
