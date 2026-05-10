@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Expense Splitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <header>
+    <div class="container">
+
+    <h1>Hostel Expense Splitter</h1>
+
+  </div>
+
+  </header>
+
+
+   <div class="maincontainer">
+
+
+
+
+  <div class="leftside">
+
+    <div class="card">
+
+    <h2>Add Friends</h2>
+
+    <div class="inputbox">
+
+    <input type="text" id="friendname" placeholder="Enter friend name">
+
+    <button onclick="addFriend()">Add</button>
+
+
+
+
+
+    </div>
+
+    <div id="friendlist" class="friendslist"></div>
+
+    </div>
+
+
+
+
+    <div class="card">
+
+
+
+    <h2>Add Expense</h2>
+
+    <input type="text" id="expensetitle" placeholder="Expense title">
+
+    <input type="number" id="expenseamount" placeholder="Amount">
+
+
+    <select id="paidby">
+    <option value="">Paid By</option>
+    </select>
+
+
+
+
+    <h3>Select Participants</h3>
+
+    <div id="peoplebox" class="peoplesbox"></div>
+
+    <button onclick="addExpense()">Add Expense</button>
+
+    </div>
+
+   </div>
+
+
+
+
+  <div class="rightside">
+
+    <div class="card">
+
+    <h2>Expenses</h2>
+
+    <div class="tablebox">
+
+ <table>
+
+<thead>
+ <tr>
+      <th>Title</th>
+    <th>Amount</th>
+    <th>Paid By</th>
+    <th>Participants</th>
+    </tr>
+    </thead>
+
+    <tbody id="expenselist"></tbody>
+
+    </table>
+
+    </div>
+
+    </div>
+
+
+
+
+    <div class="card">
+
+    <h2>Balances</h2>
+
+    <div id="balancebox"></div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
